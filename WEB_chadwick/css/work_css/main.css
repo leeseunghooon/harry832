@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+/* html {
+    scroll-behavior: smooth;
+} */
+.main{
+    z-index: 50;
+    box-sizing: border-box;
+    height: 100%;
+}
+.main-box{
+    position: relative;
+    padding: 0 20px;
+}
+.main-section{
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 50px 0;
+    /* border: 1px solid #000; */
+}
+
+/* page-title */
+.page-title{
+    width: 80%;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+.page-title h2{
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+.page-title h2::after{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 5px;
+    margin: 10px 0 0 0;
+    background-color: #aaa;
+}
+
+/* poster */
+.poster-img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    height: 650px;
+    /* border: 1px solid #000; */
+}
+i{
+    font-style: italic;
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+/* script-wrap */
+.script-section{
+    box-sizing: border-box;
+    padding: 50px 20px 20px 40px;
+    /* border: 1px solid #000; */
+}
+.script-section h2{
+    letter-spacing: 0.02em;
+    font-size: 5em;
+    font-weight: bold;
+    height: 50px;
+}
+sub{
+    font-size: 0.5em;
+}
+.script-section h4{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.script-section h4::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin: 40px 0;
+    background: #aaa;
+}
+.script-section p{
+    font-size: 2.2em;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0;
+}
+.sc-sq-se p{
+    font-size: 1.67em;
+}
+
+/* co-news */
+.co-news{
+    width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 20px 0 0 0;
+    /* border: 1px solid #000; */
+}
+.sp-box{
+    box-sizing: border-box;
+    padding: 20px 20px 20px 0;
+}
+.sp-box::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #aaa;
+}
+.sp-box h3{
+    font-weight: bold;
+    font-size: 4em;
+    padding: 0 0 10px 0;
+}
+.sp-box i{
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 1.5em;
+}
+.sp-box p{
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+}
+.fade-in{
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+
+/* movie-wrap */
+.page{
+    z-index: -10;
+    width: 150px;
+    text-align: right;
+    position: fixed;
+    top: 5%;
+    right: 20px;
+}
+.movie-wrap h4{
+    font-size: 2.2em;
+    font-weight: bold;
+}
+.page::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 2px;
+    margin-top: 10px;
+    left: 10px;
+    background-color: #000;
+}
+.ab-mv-nav{
+    position: fixed;
+    top: 25%;
+    right: 20px;
+    text-align: right;
+}
+.ab-mv-nav .mv-list li{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+.news::before, .news::after, .mv-list::before{
+    content: '';
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 1px;
+    margin: 10px 0;
+    left: 83px;
+    background-color: #aaa;
+}
+.mv-list a{
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.5s;
+}
+.mv-list a:hover{
+    color: #333
+}
+
+/* selected-mv */
+.selected-mv{
+    color: #333;
+}
+
+/* responsible */
+@media screen and (max-width:1100px) and (min-width: 769px){
+    .poster-img{
+        height: 500px;
+    }
+    .poster-img img{
+        width: 300px;
+    }
+    .script-section{
+        padding: 30px 20px 20px 20px;
+    }
+    .script-section h2{
+        font-size: 4em;
+        height: 40px;
+    }
+    .script-section h4{
+        font-size: 2em;
+    }
+    .script-section h4::after{
+        content: '';
+        display: block;
+        height: 3px;
+        width: 60px;
+        margin: 20px 0;
+        background: #aaa;
+    }
+    .script-section p{
+        font-size: 1.8em;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+    .script-section.sc-sq-se p{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width:415px){
+    .poster-img{
+        height: 450px;
+    }
+    .poster-img img{
+        width: 200px;
+    }
+    .script-section{
+        padding: 15px 20px 20px 20px;
+    }
+    .script-section h2{
+        font-size: 3em;
+        height: 30px;
+    }
+    .script-section h4{
+        font-size: 1.5em;
+    }
+    .script-section h4::after{
+        content: '';
+        display: block;
+        height: 3px;
+        width: 60px;
+        margin: 20px 0;
+        background: #aaa;
+    }
+    .script-section p{
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+    .script-section.sc-sq-se p{
+        font-size: 1.3em;
+    }
+    .sp-box h3{
+        font-weight: bold;
+        font-size: 3em;
+        padding: 0 0 10px 0;
+    }
+    .sp-box i{
+        font-size: 1.8em;
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+    .sp-box p{
+        margin-top: 10px;
+        font-size: 1.8em;
+        font-weight: bold;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:414px){
+    .movie-wrap{
+        display: none;
+    }
+    .page-title h2::after{
+        height: 0px;
+        margin: 10px 0 0 0;
+        background-color: #aaa;
+    }
+    .poster-img{
+        display: inline-block;
+        height: 450px;
+        margin-top: 50px;
+        /* border: 1px solid #000; */
+    }
+    .poster-img:first-child{
+        margin-top: 0px;
+    }
+    .poster-img img{
+        width: 380px;
+        margin-top: -20px;
+    }
+    .script-section{
+        text-align: center;
+        padding: 30px 10px;
+    }
+    .script-section h2{
+        font-size: 3em;
+        height: 30px;
+    }
+    .script-section h4{
+        font-size: 1.5em;
+    }
+    .script-section h4::after{
+        display: block;
+        height: 0px;
+        margin: 20px 0;
+        background: #aaa;
+    }
+    .script-section p{
+        font-size: 2em;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+    .page-title{
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .co-news{
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        padding: 20px 0 0 0;
+    }
+    .sp-box h3{
+        font-weight: bold;
+        font-size: 2.5em;
+        padding: 0 0 10px 0;
+    }
+    .sp-box i{
+        font-size: 1.5em;
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+    .sp-box p{
+        margin-top: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: 1.6em;
+    }
+}
